@@ -215,30 +215,8 @@ void MainUI::start() {
         displayMenu();
         int choice;
         cin >> choice;
-
         if (choice == 1) {
             string filename;
-            ofstream x("ali.txt");
-            if (x.is_open()) {
-                x << "2000\n"
-                     "2130\n"
-                     "2201\n"
-                     "23C6\n"
-                     "2420\n"
-                     "3100\n"
-                     "3400\n"
-                     "5112\n"
-                     "3101\n"
-                     "5113\n"
-                     "B124\n"
-                     "1101\n"
-                     "B014\n"
-                     "C000";
-                cout << "File 'ali.txt' created and written to successfully.\n";
-            } else {
-                cout << "Failed to create 'ali.txt'.\n";
-            }
-            x.close();
             cout << "Enter filename: ";
             cin >> filename;
             machine.loadProgramFile(filename);
